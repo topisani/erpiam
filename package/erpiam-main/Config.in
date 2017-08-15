@@ -1,0 +1,15 @@
+config BR2_PACKAGE_ERPIAM_MAIN
+        bool "Erpiam Main"
+        select BR2_ALSA_LIB
+        select BR2_PACKAGE_FREETYPE
+        select BR2_PACKAGE_LIBCURL
+        select BR2_PACKAGE_XLIB_LIBEXT
+        select BR2_PACKAGE_XLIB_LIBX11
+        select BR2_PACKAGE_XLIB_LIBXCURSOR
+        select BR2_PACKAGE_XLIB_LIBXINERAMA
+        select BR2_PACKAGE_XLIB_LIBXRANDR
+        depends on BR2_INSTALL_LIBSTDCPP
+        depends on BR2_TOOLCHAIN_HAS_THREADS
+        depends on BR2_TOOLCHAIN_USES_GLIBC
+        help
+          Erpiam blueprint main UI based on JUCE 
