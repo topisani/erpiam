@@ -1,5 +1,19 @@
 Erpiam is an Embedded Raspebrry PI 3 Linux distribution for Audio and MIDI
 
+This Linux distribution is extremely minimal and configured for low latency
+and high performance. No services are started at all and a single main
+application will be launched at the end of the boot process, running
+full-screen.
+
+This is currently an example JUCE application, called erpiam-main.
+It is configured in the 'package/erpiam-main' directory, refer to the Buildroot
+documentation to make changes. If another binary should be launched during
+boot, you might have to tweak the executable that is launched in the init
+script 'board/erpiam/overlay/etc/init.d/S99main'.
+
+The sources of the example JUCE application can be found here:
+https://github.com/gbevin/erpiam-main
+
 To build Erpiam, do the following:
 
 1) run 'make erpiam_defconfig'
@@ -7,7 +21,7 @@ To build Erpiam, do the following:
 3) wait while it compiles
 4) find the kernel, bootloader, root filesystem, etc. in output/images
 
-The file output/images/sdcard.img can be used to install Erpiam on an SD card.
+The file 'output/images/sdcard.img' can be used to install Erpiam on an SD card.
 
 Detailed information about how to install images for Raspberry PI on SD cards
 can be found on the official Raspberry PI website:
@@ -19,7 +33,7 @@ To customize Erpiam, do the following:
 2) run 'make menuconfig'
 3) navigate towards 'Target packages' and press enter
 4) the top-entry is Erpiam with options underneath
-5) pressing the ? key when an option is highlighted will provide documentation
+5) pressing the '?' key when an option is highlighted will provide documentation
 6) press ESC twice to exit
 7) select 'Yes' to save the changes to your configuration
 
