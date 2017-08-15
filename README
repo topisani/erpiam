@@ -1,26 +1,32 @@
-Buildroot is a simple, efficient and easy-to-use tool to generate embedded
-Linux systems through cross-compilation.
+Erpiam is an Embedded Raspebrry PI 3 Linux distribution for Audio and MIDI
 
-The documentation can be found in docs/manual. You can generate a text
-document with 'make manual-text' and read output/docs/manual/manual.text.
-Online documentation can be found at http://buildroot.org/docs.html
+To build Erpiam, do the following:
 
-To build and use the buildroot stuff, do the following:
+1) run 'make erpiam_defconfig'
+2) run 'make'
+3) wait while it compiles
+4) find the kernel, bootloader, root filesystem, etc. in output/images
 
-1) run 'make menuconfig'
-2) select the target architecture and the packages you wish to compile
-3) run 'make'
-4) wait while it compiles
-5) find the kernel, bootloader, root filesystem, etc. in output/images
+The file output/images/sdcard.img can be used to install Erpiam on an SD card.
 
-You do not need to be root to build or run buildroot.  Have fun!
+Detailed information about how to install images for Raspberry PI on SD cards
+can be found on the official Raspberry PI website:
+https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 
-Buildroot comes with a basic configuration for a number of boards. Run
-'make list-defconfigs' to view the list of provided configurations.
+To customize Erpiam, do the following:
 
-Please feed suggestions, bug reports, insults, and bribes back to the
-buildroot mailing list: buildroot@buildroot.org
-You can also find us on #buildroot on Freenode IRC.
+1) run 'rm -rf output' to clear all the previous build products
+2) run 'make menuconfig'
+3) navigate towards 'Target packages' and press enter
+4) the top-entry is Erpiam with options underneath
+5) pressing the ? key when an option is highlighted will provide documentation
+6) press ESC twice to exit
+7) select 'Yes' to save the changes to your configuration
 
-If you would like to contribute patches, please read
-https://buildroot.org/manual.html#submitting-patches
+Erpiam can now be built as explained in the beginning of this document.
+
+Erpian is created with Buildroot, a simple, efficient and easy-to-use tool
+to generate embedded Linux systems through cross-compilation.
+
+Online documentation for Buildroot can be found at
+http://buildroot.org/docs.html
