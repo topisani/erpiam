@@ -1,9 +1,15 @@
-Erpiam is an Embedded Raspebrry PI 3 Linux distribution for Audio and MIDI
+# Erpiam
+
+Erpiam is an Embedded Raspberry PI 3 Linux distribution for Audio and MIDI
+
+## Purpose
 
 This Linux distribution is extremely minimal and configured for low latency
 and high performance. No services are started at all and a single main
 application will be launched at the end of the boot process, running
 full-screen.
+
+## Main application
 
 This is currently an example JUCE application, called erpiam-main.
 It is configured in the 'package/erpiam-main' directory, refer to the Buildroot
@@ -13,6 +19,8 @@ script 'board/erpiam/overlay/etc/init.d/S99main'.
 
 The sources of the example JUCE application can be found here:
 https://github.com/gbevin/erpiam-main
+
+## Building
 
 To build Erpiam, do the following:
 
@@ -31,6 +39,8 @@ Here's a video that shows an example of Erpiam in action:
 
 <a href="https://www.youtube.com/watch?v=brBYhjwltdo" target="_blank"><img src="https://i.ytimg.com/vi/brBYhjwltdo/maxresdefault.jpg" alt="Erpiam in action" width="640" height="360" border="0" /></a>
 
+## Customizing
+
 To customize Erpiam, do the following:
 
 1) run 'rm -rf output' to clear all the previous build products
@@ -42,6 +52,8 @@ To customize Erpiam, do the following:
 7) select 'Yes' to save the changes to your configuration
 
 Erpiam can now be built as explained in the beginning of this document.
+
+## All thanks to Buildroot
 
 Erpian is created with Buildroot, a simple, efficient and easy-to-use tool
 to generate embedded Linux systems through cross-compilation.
