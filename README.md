@@ -60,3 +60,13 @@ to generate embedded Linux systems through cross-compilation.
 
 Online documentation for Buildroot can be found at
 http://buildroot.org/docs.html
+
+# Licensing
+
+Buildroot is covered by its own GPLv2 licensing, but since it's a build
+system that is not part of the final end product, the license of the
+individual packages should be examined.
+
+The Erpiam files that are in the located at board/erpiam,
+package/erpiam, package/erpiam-main and configs/erpiam_defconfig, are
+licensed under the Creative Commons Attribution 4.0 International License.
