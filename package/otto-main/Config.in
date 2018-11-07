@@ -1,0 +1,12 @@
+config BR2_PACKAGE_OTTO_MAIN
+        bool "Otto Main"
+        select BR2_ALSA_LIB
+        select BR2_PACKAGE_FREETYPE
+        select BR2_PACKAGE_LIBCURL
+        select BR2_PACKAGE_RPI_FIRMWARE
+        select BR2_PACKAGE_RPI_USERLAND
+        depends on BR2_INSTALL_LIBSTDCPP
+        depends on BR2_TOOLCHAIN_HAS_THREADS
+        depends on BR2_TOOLCHAIN_USES_GLIBC
+        help
+          The OTTO executable, autostarting on boot

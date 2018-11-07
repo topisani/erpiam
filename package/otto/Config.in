@@ -1,0 +1,26 @@
+config BR2_PACKAGE_OTTO
+	bool "Otto"
+	select BR2_PACKAGE_RPI_FIRMWARE
+	help
+	  Embedded Raspberry PI 3 Linux distribution for the OTTO
+
+if BR2_PACKAGE_OTTO
+
+config BR2_PACKAGE_OTTO_CONFIG_DTOVERLAY
+	string "Device tree overlays"
+	help
+	  Device tree overlays that will be added to config.xml
+
+config BR2_PACKAGE_OTTO_CONFIG_DTPARAM
+	string "Device tree params"
+	help
+	  Device tree parameters that will be added to config.xml
+
+config BR2_PACKAGE_OTTO_BOOT_SPLASH
+	string "Path to ASCII PPM splash image"
+	default "package/otto/logo_linux_clut224.ppm"
+	help
+	  The path towards an ASCII PPM image that will be compiled into the
+	  Linux kernel to use as a boot splash screen
+
+endif # BR2_PACKAGE_OTTO

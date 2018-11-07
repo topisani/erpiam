@@ -1,6 +1,7 @@
 menu "Target packages"
 
-	source "package/erpiam/Config.in"
+	source "package/otto/Config.in"
+	source "package/otto-main/Config.in"
 	source "package/erpiam-main/Config.in"
 	source "package/busybox/Config.in"
 	source "package/skeleton/Config.in"
